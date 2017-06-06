@@ -22,7 +22,8 @@ app.listen(3000, function () {
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "password123"
+  password: "password123",
+  datebase: "series"
 });
 
 con.connect(function(err) {

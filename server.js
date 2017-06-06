@@ -32,7 +32,7 @@ con.connect(function(err) {
   console.log("Connected!");
   con.query("select * from demografia", function (err, result) {
     if (err) throw err;
-    res.json("Result: " + result);
+    res.json(result);
   });
 });
 })

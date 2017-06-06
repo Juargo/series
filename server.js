@@ -26,11 +26,14 @@ var con = mysql.createConnection({
   database: "series"
 });
 
+app.get('/getquery',function(req,res){
 con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
   con.query("select * from demografia", function (err, result) {
     if (err) throw err;
-    console.log("Result: " + result);
+    res.json("Result: " + result);
   });
 });
+})
+

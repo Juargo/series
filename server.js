@@ -23,7 +23,7 @@ var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "password123",
-  datebase: "series"
+  database: "series"
 });
 
 con.connect(function(err) {

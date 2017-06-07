@@ -12,8 +12,7 @@ angular.module("seriesApp")
 
                     $http.get("http://174.138.52.191:3000/getquery?option=" + option).then(
                         function (resp) {
-                            console.log(resp);
-                            vista.setvista(resp);
+                            vista.setvista(resp.data);
                             $scope.campos = vista.getvista();
                         }
                     );

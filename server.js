@@ -20,27 +20,27 @@ app.listen(3000, function () {
 })
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "password123",
-  database: "series"
+    host: "localhost",
+    user: "root",
+    password: "password123",
+    database: "series"
 });
 
-app.get('/getquery',function(req,res){
+app.get('/getquery', function (req, res) {
     a = req.query.option;
-    if (a == "demografia"){query="select * from demografia"}
-    if (a == "genero"){query="select * from genero"}
-    if (a == "autor"){query="select * from creador"}
-    if (a == "serie"){query="select * from serie"}
+    if (a == "demografia") { query = "select * from demografia" }
+    if (a == "genero") { query = "select * from genero" }
+    if (a == "autor") { query = "select * from creador" }
+    if (a == "serie") { query = "select * from serie" }
 
 
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-  con.query(query, function (err, result) {
-    if (err) throw err;
-    res.json(result);
-  });
-});
+    con.connect(function (err) {
+        if (err) throw err;
+        console.log("Connected!");
+        con.query(query, function (err, result) {
+            if (err) throw err;
+            res.json(result);
+        });
+    });
 })
 

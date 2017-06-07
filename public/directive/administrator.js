@@ -7,8 +7,8 @@ angular.module("seriesApp")
 
                 $scope.optionselect = function (option) {
                     $scope.optionselected = option;
-                    if (option == "demografia" || option == "genero" ) { th = "<th>Nombre</th>" }
-                    if (option == "autor") { th = "<th>Nombre</th><th>Apellido</th>" }
+                    if (option == "demografia" || option == "genero" ) { $scope.th = "<th>Nombre</th>" }
+                    if (option == "autor") { $scope.th = "<th>Nombre</th><th>Apellido</th>" }
 
                     $http.get("http://174.138.52.191:3000/getquery?option=" + option).then(
                         function (resp) {

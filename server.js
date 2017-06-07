@@ -34,13 +34,10 @@ app.get('/getquery', function (req, res) {
     if (a == "serie") { query = "select * from serie" }
 
 
-    con.connect(function (err) {
-        if (err) throw err;
-        console.log("Connected!");
+        
         con.query(query, function (err, result) {
             if (err) throw err;
             res.json(result);
         });
-    });
 })
 

@@ -10,7 +10,7 @@ angular.module("seriesApp")
                     if (option == "demografia" || option == "genero" ) { th = "<th>Nombre</th>" }
                     if (option == "autor") { th = "<th>Nombre</th><th>Apellido</th>" }
 
-                    $http.get("http://localhost:3000/getquery?option=" + option).then(
+                    $http.get("http://174.138.52.191:3000/getquery?option=" + option).then(
                         function (resp) {
                             vista.setvista(resp);
                             $scope.campos = vista.getvista();

@@ -10,6 +10,7 @@
         angular.module("seriesApp",[]);
     </script>
     <script src="directive/administrator.js"></script>
+    <script src="services/vistaFactory.js"></script>
 
 </head>
 
@@ -27,15 +28,15 @@
                                 <h4 class="list-group-item-heading">Demografía</h4>
                                 <p class="list-group-item-text">Género para series Japonesas</p>
                             </a>
-                            <a href="#" class="list-group-item">
+                            <a href="#" class="list-group-item" ng-click="optionselect('genero')">
                                 <h4 class="list-group-item-heading">Género</h4>
                                 <p class="list-group-item-text">Género para series no Japonesas</p>
                             </a>
-                            <a href="#" class="list-group-item">
+                            <a href="#" class="list-group-item" ng-click="optionselect('autor')">
                                 <h4 class="list-group-item-heading">Autores</h4>
                                 <p class="list-group-item-text">Personas que crearon la serie</p>
                             </a>
-                            <a href="#" class="list-group-item">
+                            <a href="#" class="list-group-item" ng-click="optionselect('serie')">
                                 <h4 class="list-group-item-heading">Serie</h4>
                                 <p class="list-group-item-text">Nombre de la serie</p>
                             </a>

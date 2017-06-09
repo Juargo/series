@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 app.use(express.static('public'));
-app.use(express.static('public/templates'));
 
 app.listen(3000, function () {
     console.log('Escuchando en 3000');

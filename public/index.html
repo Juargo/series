@@ -15,6 +15,7 @@
                         templateUrl: 'viewdemografia.html',
                         controller: 'PrincipalCtrl'
                     })
+                $locationProvider.html5Mode(true);   
             });
     </script>
     <script src="directive/administrator.js"></script>
@@ -33,7 +34,7 @@
                     </div>
                     <div class="panel-body triggerscroll">
                         <div class="list-group" id="trigger">
-                            <a href="ViewDemografia" class="list-group-item">
+                            <a href="/ViewDemografia" class="list-group-item">
                                 <h4 class="list-group-item-heading">Demografía</h4>
                                 <p class="list-group-item-text">Género para series Japonesas</p>
                             </a>

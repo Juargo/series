@@ -15,7 +15,10 @@
                         templateUrl: 'viewdemografia.html',
                         controller: 'PrincipalCtrl'
                     })
-                $locationProvider.html5Mode(true);   
+                $locationProvider.html5Mode({
+  enabled: true,
+  requireBase: false
+});   
             });
     </script>
     <script src="directive/administrator.js"></script>

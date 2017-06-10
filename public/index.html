@@ -6,11 +6,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-route.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/angular-ui-grid/ui-grid.css" />
-    <script src="/angular-ui-grid/ui-grid.js"></script>
+    <script src="/angular-smart-table/smart-table.js"></script>
 
     <script>
-        angular.module("seriesApp", ['ngRoute', 'ui.grid'])
+        angular.module("seriesApp", ['ngRoute', 'smart-table'])
             .config(function ($routeProvider, $locationProvider) {
                 $routeProvider
                     .when('/View/:option', {
@@ -27,18 +26,7 @@
     <script src="services/vistaFactory.js"></script>
     <script src="controllers/PrincipalController.js"></script>
 
-    <style>
-        .myGrid {
-            width: 500px;
-            height: 32px;
-        }
-
-        .grid-viewport {
-            width: 500px;
-            height: 362px;
-        }
-    </style>
-
+    
 </head>
 
 <body>

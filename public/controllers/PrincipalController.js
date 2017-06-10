@@ -14,7 +14,7 @@ angular.module("seriesApp")
             }
         );
     })
-    .controller("addCtrl",function($scope,$routeParams,$http){
+    .controller("addCtrl",function($scope,$routeParams,$http,vista){
         $scope.params = $routeParams;
         $scope.option = $scope.params.option;
         $http.get("http://174.138.52.191:3000/getquery?option=autores").then(

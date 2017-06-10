@@ -2,6 +2,7 @@ angular.module("seriesApp")
     .controller("PrincipalCtrl", function ($scope, $http, vista, $routeParams,$timeout) {
         $scope.itemsByPage=5;
         $scope.params = $routeParams;
+        $scope.option = $scope.params.option;
         if ($scope.params.option == "demografia"||$scope.params.option=="genero"){ $scope.tmpl = "onecolumn.html"}
         if ($scope.params.option == "autores"){ $scope.tmpl = "creador.html"}
         // $timeout(function () {
@@ -11,14 +12,4 @@ angular.module("seriesApp")
                 $scope.campos = vista.getvista();
             }
         );
-        // }, 1000);
-
-        // // $scope.campos=[
-        // //      {nombre:"Kodomo"},
-        // //      {nombre:"Shonen"},
-        // //      {nombre:"Seinen"},
-        // //      {nombre:"Josei"},
-        // //      {nombre:"Cyberpunk"},
-        // // ]
-
     })

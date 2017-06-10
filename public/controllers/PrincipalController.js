@@ -1,5 +1,5 @@
 angular.module("seriesApp")
-    .controller("PrincipalCtrl", function ($scope, $http, vista, $routeParams) {
+    .controller("PrincipalCtrl", function ($scope, $http, vista, $routeParams,$timeout) {
         // $scope.itemsByPage=5;
         // $scope.params = $routeParams;
         // if ($scope.params.option == "demografia"){ $scope.tmpl = "onecolumn.html"}

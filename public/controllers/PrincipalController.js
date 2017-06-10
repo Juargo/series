@@ -1,7 +1,7 @@
 angular.module("seriesApp")
     .controller("PrincipalCtrl", function ($scope, $http, vista, $routeParams) {
         $scope.params = $routeParams;
-        console.log($scope.params);
+        if ($scope.params.option == "demografia"){ $scope.tmpl = "onecolumn.html"}
         $http.get("http://174.138.52.191:3000/getquery?option=demografia").then(
             function (resp) {
                 vista.setvista(resp.data);

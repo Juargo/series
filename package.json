@@ -5,6 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "angular-smart-table": "^2.1.8",
+    "angular-ui-grid": "^4.0.4",
     "body-parser": "^1.15.2",
     "express": "latest",
     "mysql": "latest",

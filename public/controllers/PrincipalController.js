@@ -28,6 +28,7 @@ angular.module("seriesApp")
             function (resp) {
                 vista.setvista(resp.data);
                 $scope.autores = vista.getvista();
+                console.log($scope.autores);
             }
         );
         }

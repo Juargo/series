@@ -19,4 +19,9 @@ angular.module("seriesApp")
         if ($scope.params.option == "demografia"){ $scope.tmpl = "addDemografia.html"}
         if ($scope.params.option == "genero"){ $scope.tmpl = "addGenero.html"}
         if ($scope.params.option == "autores"){ $scope.tmpl = "addCreador.html"}
+
+
+        $scope.save = function(nombre){
+            console.log(nombre);
+        }
     })

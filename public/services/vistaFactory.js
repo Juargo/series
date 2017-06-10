@@ -6,7 +6,10 @@ angular.module("seriesApp")
             return vista;
         },
         setvista: function(a){
-            vista=a;
+            for(s in a){
+                console.log(s);
+            }
+            // vista=a;
         }
     }
 })

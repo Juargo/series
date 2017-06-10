@@ -9,7 +9,7 @@ angular.module("seriesApp")
                 // $scope.campos = vista.getvista();
             }
         );
-        $scope.campos = vista.getvista();
+        
         // $scope.campos=[
         //      {nombre:"Kodomo"},
         //      {nombre:"Shonen"},

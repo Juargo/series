@@ -11,7 +11,7 @@ angular.module("seriesApp")
                 $scope.gridOptions.data = resp.data;
             }
         );
-        }, 2000);
+        }, 1000);
 
         // $scope.campos=[
         //      {nombre:"Kodomo"},

@@ -8,7 +8,7 @@ angular.module("seriesApp")
             function (resp) {
                 // vista.setvista(resp.data);
                 // $scope.campos = vista.getvista();
-                $scope.gridOptions.data = data;
+                $scope.gridOptions.data = resp.data;
             }
         );
         }, 2000);

@@ -1,0 +1,22 @@
+<form class="well form-horizontal" action=" " method="post" id="contact_form">
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <legend>Género</legend>
+
+                        <!-- Text input-->
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Nombre</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input name="first_name"  class="form-control" type="text" ng-model="nombre">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+</form>
+<button type="button" class="btn btn-default btn-lg" ng-click="save(nombre)">
+  <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>Save
+</button>

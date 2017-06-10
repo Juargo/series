@@ -13,7 +13,7 @@ angular.module("seriesApp")
             }
         );
     })
-    .controller("addCtrl",function($scope,$routeParams){
+    .controller("addCtrl",function($scope,$routeParams,$http){
         $scope.params = $routeParams;
         $scope.option = $scope.params.option;
         if ($scope.params.option == "demografia"){ $scope.tmpl = "addDemografia.html"; $scope.table="demografia"}

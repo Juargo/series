@@ -40,6 +40,7 @@ app.get('/getquery', function (req, res) {
             if (err) throw err;
             res.json(result);
         });
+        console.log("fda");
 });
 
 app.post('/insert', function(req,res){

@@ -6,9 +6,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-route.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/angular-ui-grid/ui-grid.css" />
+    <script src="/angular-ui-grid/ui-grid.js"></script>
 
     <script>
-        angular.module("seriesApp", ['ngRoute', 'smart-table'])
+        angular.module("seriesApp", ['ngRoute', 'ui.grid'])
             .config(function ($routeProvider, $locationProvider) {
                 $routeProvider
                     .when('/View/:option', {

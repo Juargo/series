@@ -7,7 +7,7 @@ angular.module("seriesApp")
             function (resp) {
                 vista.setvista(resp.data);
                 $scope.campos = vista.getvista();
-                console.log($scope.campos.nombre);
+                console.log($scope.campos);
             }
         );
     })

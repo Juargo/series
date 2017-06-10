@@ -16,12 +16,13 @@ angular.module("seriesApp")
     .controller("addCtrl",function($scope,$routeParams){
         $scope.params = $routeParams;
         $scope.option = $scope.params.option;
-        if ($scope.params.option == "demografia"){ $scope.tmpl = "addDemografia.html"}
-        if ($scope.params.option == "genero"){ $scope.tmpl = "addGenero.html"}
-        if ($scope.params.option == "autores"){ $scope.tmpl = "addCreador.html"}
+        if ($scope.params.option == "demografia"){ $scope.tmpl = "addDemografia.html"; $scope.table="demografia"}
+        if ($scope.params.option == "genero"){ $scope.tmpl = "addGenero.html";$scope.table="genero"}
+        if ($scope.params.option == "autores"){ $scope.tmpl = "addCreador.html"; $scope.table="creador"}
 
 
         $scope.save = function(nombre){
-            console.log(nombre);
+            sql= "insert into" + $scope.table  +"(nombre) values (" + nombre + ")";
+            $http.post("http://174.138.52.191:3000/insert?sql="+ sql);
         }
     })

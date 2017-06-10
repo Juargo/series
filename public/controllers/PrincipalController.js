@@ -30,6 +30,108 @@ angular.module("seriesApp")
         "lastName": "Waters",
         "company": "Fuelton",
         "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
     }];
     console.log($scope.myData);
     vista.setvista($scope.myData);

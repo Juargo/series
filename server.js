@@ -28,7 +28,7 @@ var con = mysql.createConnection({
 
 app.get('/getquery', function (req, res) {
     a = req.query.option;
-    if (a == "demografia") { query = "select * from demografia" }
+    if (a == "demografia") { query = "select nombre from demografia" }
     if (a == "genero") { query = "select * from genero" }
     if (a == "autor") { query = "select * from creador" }
     if (a == "serie") { query = "select * from serie" }

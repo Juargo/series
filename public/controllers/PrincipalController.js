@@ -21,7 +21,7 @@ angular.module("seriesApp")
         if ($scope.params.option == "autores"){ $scope.tmpl = "addCreador.html"; $scope.table="creador"}
 
 
-        $scope.save = function(nombre){
+        $scope.save = function(nombre, apellido){
             if($scope.option=="demografia"|| $scope.option=="genero"){
                 sql= "insert into " + $scope.table  +"(nombre) values ('" + nombre + "')";
             }

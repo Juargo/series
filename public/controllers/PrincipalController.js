@@ -22,7 +22,7 @@ angular.module("seriesApp")
 
 
         $scope.save = function(nombre){
-            sql= "insert into " + $scope.table  +"(nombre) values (" + nombre + ")";
+            sql= "insert into " + $scope.table  +"(nombre) values ('" + nombre + "')";
             $http.post("http://174.138.52.191:3000/insert?sql="+ sql);
         }
     })

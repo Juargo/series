@@ -1,12 +1,19 @@
 <table st-table="rowCollection" class="table table-striped">
-	<thead>
-	<tr>
-		<th>Nombre</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr ng-repeat="row in campos">
-		<td>{{row.nombre}}</td>
-	</tr>
-	</tbody>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in campos">
+            <td>{{row.nombre}}</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan="5" class="text-center">
+                    <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </tbody>
 </table>

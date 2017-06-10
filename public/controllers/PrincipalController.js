@@ -3,12 +3,15 @@ angular.module("seriesApp")
         // $scope.itemsByPage=5;
         // $scope.params = $routeParams;
         // if ($scope.params.option == "demografia"){ $scope.tmpl = "onecolumn.html"}
-        // $http.get("http://174.138.52.191:3000/getquery?option=demografia").then(
-        //     function (resp) {
-        //         vista.setvista(resp.data);
-        //         $scope.campos = vista.getvista();
-        //     }
-        // );
+        $timeout(function () {
+        $http.get("http://174.138.52.191:3000/getquery?option=demografia").then(
+            function (resp) {
+                // vista.setvista(resp.data);
+                // $scope.campos = vista.getvista();
+                $scope.gridOptions.data = data;
+            }
+        );
+        }, 2000);
 
         // $scope.campos=[
         //      {nombre:"Kodomo"},
@@ -18,10 +21,4 @@ angular.module("seriesApp")
         //      {nombre:"Cyberpunk"},
         // ]
 
-        $timeout(function () {
-            $http.get('http://174.138.52.191:3000/getquery?option=demografia')
-                .success(function (data) {
-                    $scope.gridOptions.data = data;
-                });
-        }, 2000);
     })

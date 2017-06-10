@@ -17,6 +17,13 @@ angular.module("seriesApp")
     .controller("addCtrl",function($scope,$routeParams,$http){
         $scope.params = $routeParams;
         $scope.option = $scope.params.option;
+        $http.get("http://174.138.52.191:3000/getquery?option=autores").then(
+            function (resp) {
+                vista.setvista(resp.data);
+                $scope.autores = vista.getvista();
+                console.log(resp.data);
+            }
+        );
         if ($scope.params.option == "demografia"){ $scope.tmpl = "addDemografia.html"; $scope.table="demografia"}
         if ($scope.params.option == "genero"){ $scope.tmpl = "addGenero.html";$scope.table="genero"}
         if ($scope.params.option == "autores"){ $scope.tmpl = "addCreador.html"; $scope.table="creador"}
@@ -24,13 +31,6 @@ angular.module("seriesApp")
         if ($scope.params.option == "serie"){ 
             $scope.tmpl = "addSerie.html"; 
             $scope.table="serie";
-            $http.get("http://174.138.52.191:3000/getquery?option=autores").then(
-            function (resp) {
-                vista.setvista(resp.data);
-                $scope.autores = vista.getvista();
-                console.log($scope.autores);
-            }
-        );
         }
 
 

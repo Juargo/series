@@ -32,6 +32,7 @@ app.get('/getquery', function (req, res) {
     if (a == "genero") { query = "select * from genero" }
     if (a == "autores") { query = "select * from creador" }
     if (a == "serie") { query = "select * from serie" }
+    if (a == "emisora") { query = "select * from emisora" }
 
 
         
@@ -46,6 +47,7 @@ app.post('/insert', function(req,res){
 
     con.query(a, function(err,result){
         if(err) throw err;
+        res.end();
     })
 })
 

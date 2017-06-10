@@ -29,20 +29,44 @@
             </div>
         </div>
 
-         <div class="form-group">
+        <div class="form-group">
             <label class="col-md-4 control-label">Autores</label>
             <div class="col-md-4 selectContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                    <select name="state" class="form-control selectpicker">
-                        <option value=" ">Please select your state</option>
-                        <option value=" "  ng-repeat="autor in autores">{{autor.nombre}}</option>
+                    <select multiple name="state" class="form-control selectpicker">
+                        <option value=" "></option>
+                        <option value=" "  ng-repeat="autor in autores">{{autor.nombre}} {{autor.apellido}}</option>
                     </select>
                 </div>
             </div>
         </div>
 
+        <div class="form-group">
+            <label class="col-md-4 control-label">Demografia</label>
+            <div class="col-md-4 selectContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="state" class="form-control selectpicker">
+                        <option value=" "></option>
+                        <option value=" "  ng-repeat="demo in demografia">{{demo.nombre}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
 
+        <div class="form-group">
+            <label class="col-md-4 control-label">Género</label>
+            <div class="col-md-4 selectContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select multiple name="state" class="form-control selectpicker">
+                        <option value=" "></option>
+                        <option value=" "  ng-repeat="genero in genero">{{genero.nombre}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </fieldset>
 </form>
 <button type="button" class="btn btn-default btn-lg" ng-click="save(nombre,apellido)">

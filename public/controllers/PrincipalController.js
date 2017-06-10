@@ -24,11 +24,10 @@ angular.module("seriesApp")
         if ($scope.params.option == "serie"){ 
             $scope.tmpl = "addSerie.html"; 
             $scope.table="serie";
-            $scope.campos={};
             $http.get("http://174.138.52.191:3000/getquery?option=autores").then(
             function (resp) {
                 vista.setvista(resp.data);
-                $scope.campos.autores = vista.getvista();
+                $scope.autores = vista.getvista();
             }
         );
         }

@@ -11,7 +11,7 @@
         angular.module("seriesApp", ['ngRoute'])
             .config(function ($routeProvider, $locationProvider) {
                 $routeProvider
-                    .when('/ViewDemografia', {
+                    .when('/View/:option', {
                         templateUrl: 'templates/viewdemografia.html',
                         controller: 'PrincipalCtrl'
                     })

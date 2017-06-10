@@ -6,4 +6,6 @@ angular.module("seriesApp")
                 $scope.campos = vista.getvista();
             }
         );
+
+        $scope.tmpl = "templates/vista.html";
     })

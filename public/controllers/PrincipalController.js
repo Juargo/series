@@ -31,7 +31,8 @@ angular.module("seriesApp")
         "company": "Fuelton",
         "employed": false
     }];
-
+    consol.log($scope.myData);
     vista.setvista($scope.myData);
     $scope.campos = vista.getvista();
+    console.log($scope.campos);
     })

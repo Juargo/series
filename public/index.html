@@ -16,6 +16,10 @@
                         templateUrl: 'view.html',
                         controller: 'PrincipalCtrl'
                     })
+                    .when('/View/Add/:option', {
+                        templateUrl: 'add.html',
+                        controller: 'addCtrl'
+                    })
                 $locationProvider.html5Mode({
                     enabled: true,
                     requireBase: false

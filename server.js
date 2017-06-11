@@ -43,12 +43,13 @@ app.get('/getquery', function (req, res) {
 });
 
 app.post('/insert', function(req,res){
-    a = req.query.sql
+    console.log(req.body);
+    // a = req.query.sql
 
-    con.query(a, function(err,result){
-        if(err) throw err;
-        res.json(result.insertId);
-        res.end();
-    })
+    // con.query(a, function(err,result){
+    //     if(err) throw err;
+    //     res.json(result.insertId);
+    //     res.end();
+    // })
 })
 

@@ -14,7 +14,7 @@ angular.module("seriesApp")
             }
         );
     })
-    .controller("addCtrl", function ($scope, $routeParams, $http, vista,$window) {
+    .controller("addCtrl", function ($scope, $routeParams, $http, vista,$window,FileUploader) {
         $scope.uploader = new FileUploader();
         $scope.params = $routeParams;
         $scope.option = $scope.params.option;

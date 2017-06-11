@@ -1,7 +1,7 @@
 angular.module("seriesApp")
 .controller('AppController', function($scope, FileUploader) {
         $scope.uploader = new FileUploader();
-        $scope.upload = function(item){
+        $scope.uploade = function(item){
             console.log(item);
         }
     })

@@ -2,11 +2,14 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 var mysql = require('mysql');
+var fileUpload = require('express-fileupload');
+
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 var app = express();
 
+app.use(fileUpload());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -52,3 +55,11 @@ app.post('/insert', function(req,res){
     })
 })
 
+app.post('/upload', function(req,res){
+  req.files.foo.mv('/public/'+ req.files.foo.name, function(err) {
+    if (err)
+      return res.status(500).send(err);
+ 
+    res.send('File uploaded!');
+  });
+})

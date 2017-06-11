@@ -52,24 +52,22 @@ angular.module("seriesApp")
         }
 
 
-        $scope.save = function (nombre, apellido) {
+        $scope.save = function (nombre, apellido,json) {
             if ($scope.option == "demografia" || $scope.option == "genero" || $scope.option == "emisora") {
                 sql = "insert into " + $scope.table + "(nombre) values ('" + nombre + "')";
             }
             if ($scope.option == "autores") {
                 sql = "insert into " + $scope.table + "(nombre, apellido) values ('" + nombre + "','" + apellido + "')";
             }
-            dato={}
-            dato.sql = sql;
-            $http.post("http://174.138.52.191:3000/insert",dato).then(
-                function(resp,err){
-                    console.log(resp);
-                    console.log(err);
-                    vista.setinsertid(resp);
-                    $scope.insertid = vista.getinsertid();
-                    console.log($scope.insertid.data);
-                }
-            );
+            console.log(foo);
+            // dato={}
+            // dato.sql = sql;
+            // $http.post("http://174.138.52.191:3000/insert",dato).then(
+            //     function(resp,err){
+            //         vista.setinsertid(resp);
+            //         $scope.insertid = vista.getinsertid();
+            //     }
+            // );
             $window.location.href = '/';
         }
     })

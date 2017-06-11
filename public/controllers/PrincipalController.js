@@ -14,7 +14,7 @@ angular.module("seriesApp")
             }
         );
     })
-    .controller("addCtrl", function ($scope, $routeParams, $http, vista) {
+    .controller("addCtrl", function ($scope, $routeParams, $http, vista,$window) {
         $scope.params = $routeParams;
         $scope.option = $scope.params.option;
 

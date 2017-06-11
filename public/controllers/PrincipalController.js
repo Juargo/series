@@ -60,7 +60,7 @@ angular.module("seriesApp")
             //     sql = "insert into " + $scope.table + "(nombre, apellido) values ('" + nombre + "','" + apellido + "')";
             // }
             console.log("sdasd");
-            console.dir($scope.foo);
+            console.log($scope.foo);
             // dato={}
             // dato.sql = sql;
             // $http.post("http://174.138.52.191:3000/insert",dato).then(
@@ -68,7 +68,7 @@ angular.module("seriesApp")
             //         vista.setinsertid(resp);
             //         $scope.insertid = vista.getinsertid();
             //     }
-            // );
-            $window.location.href = '/';
+            // // );
+            // $window.location.href = '/';
         }
     })

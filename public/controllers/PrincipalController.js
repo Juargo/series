@@ -1,4 +1,8 @@
 angular.module("seriesApp")
+.controller('AppController', function($scope, FileUploader) {
+        $scope.uploader = new FileUploader();
+        console.log($scope.uploader);
+    })
     .controller("PrincipalCtrl", function ($scope, $http, vista, $routeParams, $timeout) {
         $scope.itemsByPage = 5;
         $scope.params = $routeParams;

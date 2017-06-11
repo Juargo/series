@@ -47,7 +47,7 @@ app.post('/insert', function(req,res){
 
     con.query(a, function(err,result){
         if(err) throw err;
-        res.json(result.insertId);
+        res.json({ status: 500, data: result.insertId });
         res.end();
     })
 })

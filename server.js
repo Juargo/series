@@ -43,7 +43,7 @@ app.get('/getquery', function (req, res) {
 });
 
 app.post('/insert', function(req,res){
-    console.log(req.body);
+    console.log(req.body.sql);
     // a = req.query.sql
 
     // con.query(a, function(err,result){

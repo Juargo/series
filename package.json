@@ -4,6 +4,7 @@
   "description": "test1",
   "main": "server.js",
   "dependencies": {
+    "angular-file-upload": "^2.5.0",
     "angular-smart-table": "^2.1.8",
     "angular-ui-grid": "^4.0.4",
     "body-parser": "^1.15.2",

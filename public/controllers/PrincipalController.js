@@ -62,9 +62,12 @@ angular.module("seriesApp")
             dato={}
             dato.sql = sql;
             $http.post("http://174.138.52.191:3000/insert",dato).then(
-                // function(resp){
-                //     console.log(resp.data);
-                // }
+                function(resp){
+                    console.log(resp.data);
+                },
+                function(err){
+                    console.log(err);
+                }
             );
             $window.location.href = '/';
         }

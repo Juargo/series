@@ -40,7 +40,6 @@ app.get('/getquery', function (req, res) {
             if (err) throw err;
             res.json(result);
         });
-        console.log(a);
 });
 
 app.post('/insert', function(req,res){
@@ -48,6 +47,7 @@ app.post('/insert', function(req,res){
 
     con.query(a, function(err,result){
         if(err) throw err;
+        console.log(result.insertId);
         res.end();
     })
 })

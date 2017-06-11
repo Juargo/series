@@ -61,7 +61,7 @@ angular.module("seriesApp")
             //     sql = "insert into " + $scope.table + "(nombre, apellido) values ('" + nombre + "','" + apellido + "')";
             // }
             console.log("sdasd");
-            console.log($scope.foo);
+            console.log($scope.uploader);
             // dato={}
             // dato.sql = sql;
             // $http.post("http://174.138.52.191:3000/insert",dato).then(

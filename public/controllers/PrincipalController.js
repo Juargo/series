@@ -53,13 +53,13 @@ angular.module("seriesApp")
 
 
         $scope.save = function (nombre, apellido,json) {
-            if ($scope.option == "demografia" || $scope.option == "genero" || $scope.option == "emisora") {
-                sql = "insert into " + $scope.table + "(nombre) values ('" + nombre + "')";
-            }
-            if ($scope.option == "autores") {
-                sql = "insert into " + $scope.table + "(nombre, apellido) values ('" + nombre + "','" + apellido + "')";
-            }
-            console.log(json);
+            // if ($scope.option == "demografia" || $scope.option == "genero" || $scope.option == "emisora") {
+            //     sql = "insert into " + $scope.table + "(nombre) values ('" + nombre + "')";
+            // }
+            // if ($scope.option == "autores") {
+            //     sql = "insert into " + $scope.table + "(nombre, apellido) values ('" + nombre + "','" + apellido + "')";
+            // }
+            console.dir($scope.foo);
             // dato={}
             // dato.sql = sql;
             // $http.post("http://174.138.52.191:3000/insert",dato).then(

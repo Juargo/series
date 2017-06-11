@@ -67,7 +67,7 @@ angular.module("seriesApp")
                     console.log(err);
                     vista.setinsertid(resp);
                     $scope.insertid = vista.getinsertid();
-                    console.log($scope.insertid);
+                    console.log($scope.insertid.data);
                 }
             );
             $window.location.href = '/';

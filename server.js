@@ -12,11 +12,16 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 var app = express();
 
 // app.use(fileUpload());
-app.use(multer({
+// app.use(multer({
 
- dest: './public/'
+//  dest: './public/'
 
-}));
+// }));
+var storage = multer.diskStorage({ //multers disk storage settings
+        destination: function (req, file, cb) {
+            cb(null, './public/')
+        }
+    });
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -61,7 +66,8 @@ app.post('/insert', function(req,res){
         res.end();
     })
 })
-var upload = multer();
+var upload = multer({storage: storage
+                }).single('file');
 app.post('/upload', function(req,res){
     upload(req,res,function(err){
             if(err){

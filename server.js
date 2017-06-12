@@ -69,6 +69,7 @@ app.post('/insert', function(req,res){
 var upload = multer({storage: storage
                 }).single('file');
 app.post('/upload', function(req,res){
+    
     upload(req,res,function(err){
             if(err){
                  console.log({error_code:1,err_desc:err});

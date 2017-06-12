@@ -14,7 +14,7 @@ angular.module("seriesApp")
             }
         );
     })
-    .controller("addCtrl", function ($scope, $routeParams, $http, vista,$window,FileUploader) {
+    .controller("addCtrl", function ($scope, $routeParams, $http, vista, $window, FileUploader) {
         $scope.uploader = new FileUploader();
         $scope.params = $routeParams;
         $scope.option = $scope.params.option;
@@ -53,7 +53,7 @@ angular.module("seriesApp")
         }
 
 
-        $scope.save = function (nombre, apellido,json) {
+        $scope.save = function (nombre, apellido, json) {
             // if ($scope.option == "demografia" || $scope.option == "genero" || $scope.option == "emisora") {
             //     sql = "insert into " + $scope.table + "(nombre) values ('" + nombre + "')";
             // }
@@ -72,4 +72,24 @@ angular.module("seriesApp")
             // // );
             // $window.location.href = '/';
         }
+
+
+        $scope.uploadFile = function () {
+
+            $scope.fileSelected = function (files) {
+                if (files && files.length) {
+                    $scope.file = files[0];
+                }
+
+                $upload.upload({
+                    url: '/api/upload',
+                    file: $scope.file
+                })
+                    .success(function (data) {
+                        console.log(data, 'uploaded');
+                    });
+
+            };
+        };
+    });
     })

@@ -2,7 +2,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 var mysql = require('mysql');
-var fileUpload = require('express-fileupload');
+var multer = require('multer');
+
+// var fileUpload = require('express-fileupload');
 
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";

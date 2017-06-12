@@ -25,7 +25,7 @@ http.createServer(function (req, res) {
     if(req.url="/testdir"){
         var dir="./images";
         if(!fs.existsSync(dir)){
-            fd.mkdirSync(dir);
+            fs.mkdirSync(dir);
         }
     }
 }).listen(8080);

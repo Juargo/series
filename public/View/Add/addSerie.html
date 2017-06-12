@@ -76,9 +76,14 @@
                 <button ng-click="uploade(item)">upload</button>
             </li>
         </ul>-->
-        <input type="file" ng-file-select="fileSelected($files)" accept="'image/*'">
-   <button type="button" ng-click="uploadFile()" ></button>
+        <!--<input type="file" ng-file-select="fileSelected($files)" accept="'image/*'">
+   <button type="button" ng-click="uploadFile()" ></button>-->
+
     </fieldset>
+</form>
+<form action="http://174.138.52.191:8080/fileupload" method="post" enctype="multipart/form-data">
+    <input type="file" name="filetoupload">
+    <input type="submit">
 </form>
 <button type="button" class="btn btn-default btn-lg" ng-click="save(nombre,apellido,uploader)">
   <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>Save

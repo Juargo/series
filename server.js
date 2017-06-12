@@ -22,6 +22,12 @@ http.createServer(function (req, res) {
             });
         });
     }
+    if(req.url="/testdir"){
+        var dir="./images";
+        if(!fs.existsSync(dir)){
+            fd.mkdirSync(dir);
+        }
+    }
 }).listen(8080);
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 

@@ -76,6 +76,8 @@ angular.module("seriesApp")
 
         $scope.uploadFile = function () {
 
+            $scope.fileSelected = function (files) {
+                console.log("ss");
                 if (files && files.length) {
                     $scope.file = files[0];
                 }
@@ -89,4 +91,5 @@ angular.module("seriesApp")
                     });
 
             };
+        };
     });

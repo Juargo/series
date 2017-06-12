@@ -9,7 +9,12 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 var app = express();
 
-app.use(fileUpload());
+// app.use(fileUpload());
+app.use(multer({
+
+ dest: './public/'
+
+}));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -54,12 +59,20 @@ app.post('/insert', function(req,res){
         res.end();
     })
 })
-
+var upload = multer();
 app.post('/upload', function(req,res){
-  req.files.foo.mv('/public/'+ req.files.foo.name, function(err) {
-    if (err)
-      return res.status(500).send(err);
+    upload(req,res,function(err){
+            if(err){
+                 console.log({error_code:1,err_desc:err});
+                 return;
+            }
+            console.log({error_code:0,err_desc:null});
+        })
+//   req.files.foo.mv('/public/'+ req.files.foo.name, function(err) {
+//     if (err)
+//       return res.status(500).send(err);
  
-    res.send('File uploaded!');
-  });
+//     res.send('File uploaded!');
+//   });
 })
+

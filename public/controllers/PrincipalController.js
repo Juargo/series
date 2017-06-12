@@ -82,7 +82,7 @@ angular.module("seriesApp")
                 }
 
                 $upload.upload({
-                    url: '/api/upload',
+                    url: 'http://174.138.52.191:3000/upload',
                     file: $scope.file
                 })
                     .success(function (data) {
